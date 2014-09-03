@@ -1,0 +1,1415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>
+    Kaizen model home
+</title>
+
+<!-- Bootstrap core CSS -->
+<link href="dist/css/bootstrap.css" rel="stylesheet">
+
+<!-- Documentation extras -->
+<link href="assets/css/docs.css" rel="stylesheet">
+<link href="assets/css/pygments-manni.css" rel="stylesheet">
+<link href="assets/css/font-awesome.css" rel="stylesheet">
+<link href="assets/css/social-buttons.css" rel="stylesheet">
+
+<!--[if IE 7]>
+  <link rel="stylesheet" href="assets/css/font-awesome-ie7.css">
+<![endif]-->
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="../assets/js/html5shiv.js"></script>
+  <script src="../assets/js/respond.min.js"></script>
+<![endif]-->
+
+<!-- Favicons -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+                <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+                               <link rel="shortcut icon" href="../assets/ico/favicon.png">
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43921292-1', 'kaizenmodel.org');
+  ga('send', 'pageview');
+
+</script>
+							   
+    <!-- Place anything custom after this. -->
+  </head>
+  <body>
+    <a class="sr-only" href="#content">Skip navigation</a>
+
+    <!-- Docs master nav -->
+    <header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="home.html" class="navbar-brand">Kaizen model</a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li class="">
+          <a href="home.html">Home</a>
+        </li>
+        <li class="">
+          <a href="getting-started.html">Getting started</a>
+        </li>
+        <li class="active">
+          <a href="guide.html">Guide</a>
+        </li>
+        <li class="">
+          <a href="kaizen-lite.html">Kaizen Lite <span class="badge">new</span></a>
+        </li>
+        <li class="">
+          <a href="templates.html">Templates</a>
+        </li>
+        <li class="disabled">
+          <a>Training</a>
+        </li>
+        <li class="">
+          <a href="tools.html">Tools</a>
+        </li>
+        <li class="">
+          <a href="get-involved.html">Get involved</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <!-- Docs page layout -->
+    <div class="bs-header" id="content">
+      <div class="container">
+	<blockquote>
+		<p class="lead">Guide</p>
+		<p>Deep overview of Kaizen model</p>
+		<small>This page aims to provide you deep understanding of the model</small>
+	</blockquote>
+      </div>
+    </div>
+
+    <div class="container bs-docs-container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="bs-sidebar hidden-print" role="complementary">
+            <ul class="nav bs-sidenav">
+
+<li>
+  <a href="#preface">Preface</a>
+  <ul class="nav">
+    <li><a href="#preface-evolution">Building rather than rebuilding</a></li>
+  </ul>
+</li>
+<li>
+  <a href="#goals">Goals</a>
+</li>
+<li>
+  <a href="#guidelines">Guidelines</a>
+  <ul class="nav">
+	<li><a href="#guidelines-model">Model</a></li>
+	<li><a href="#guidelines-milestones">Milestones</a></li>
+	<li><a href="#guidelines-ba">Business Analyst (BA)</a></li>
+	<li><a href="#guidelines-tech-lead">Technical Lead</a></li>
+	<li><a href="#guidelines-pm">Project Manager (PM)</a></li>
+	<li><a href="#guidelines-tl">Team Leader (TL)</a></li>
+	<li><a href="#guidelines-sme">Subject Matter Expert (SME's)</a></li>
+	<li><a href="#guidelines-team">Team</a></li>
+  </ul>
+</li>
+<li>
+  <a href="#decisions">Decisions / Responsibilities</a>
+  <ul class="nav">
+		<li><a href="#decisions-pairs">Pairs</a></li>
+		<li><a href="#decisions-responsibilities">Responsibilities</a></li>
+  </ul>
+</li>
+<li>
+  <a href="#phases">Four phases of the cycle</a>
+  <ul class="nav">
+	<li><a href="#phases-egg">Requirements (egg)</a></li>
+	<li><a href="#phases-pupa">Planning (pupa)</a></li>
+	<li><a href="#phases-meta">Construction (metamorphosis)</a></li>
+	<li><a href="#phases-birth">Delivery (birth)</a></li>
+  </ul>
+</li>
+<li>
+  <a href="#waste">Waste tracking</a>
+  <ul class="nav">
+	<li><a href="#waste-debt">Debt</a></li>
+	<li><a href="#waste-checkpoints">Checkpoints</a></li>
+  </ul>
+</li>
+<li>
+  <a href="#logs">Logs</a>
+  <ul class="nav">
+	<li><a href="#logs-milestones">Milestones log</a></li>
+	<li><a href="#logs-risks">Risks log</a></li>
+	<li><a href="#logs-issues">Issues log</a></li>
+	<li><a href="#logs-debt">Debt log</a></li>
+	<li><a href="#logs-recycle">Recycle plan</a></li>
+  </ul>
+</li>
+<li>
+  <a href="#visualize">Visualize</a>
+  <ul class="nav">
+	<li><a href="#visualize-kanban">Kanban method</a></li>
+  </ul>
+</li>
+<li>
+  <a href="#best-practises">Best practices</a>
+  <ul class="nav">
+	<li><a href="#practises-do">DO's</a></li>
+	<li><a href="#practises-dont">DONT's</a></li>
+  </ul></li>
+<li>
+  <a href="#prologue">Prologue</a>
+</li>
+<li>
+  <a href="#feedback">Feedback</a>
+</li>
+
+              
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-9" role="main">
+		
+  <!-- Preface
+  ================================================== -->
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="preface">Preface</h1>
+    </div>
+    <p class="">
+I was born in world where equality and stability was claimed as main purpose, that goal attracted millions of people under it's red banners.
+It is not the idea that fails people - but it's implementation, which resulted in inefficiency, corruption and huge waste. 
+I believe that equality and stability can be achieved along with constant improvement, incorporation of innovation, while constantly performing waste removal.
+	</p>
+	<p>
+Enterprises are like small countries and while trying to treat everybody equally, provide stability and measure their own success they, sometimes, fall prey to the same issues: 
+they might miss on opportunity to use diversity, promote talent, encapsulate pride in workmanship and during attempts to measure own success - 
+sometimes start introducing waste to the system in form of unneeded bureaucracy and extensive reporting.
+	</p>
+	<p>
+		<strong>
+This model is published as Work In Progress. I am strong believer that communities are stronger than any individual and, in current era - when
+we all are "connected", some great solutions can be created together.
+		</strong>
+	</p>
+	
+	<h3 id="preface-evolution">Building rather than rebuilding</h3>
+	<p class="">
+Every great idea was already told before and it's a slim chance that in our 60 years of adult life we would be able to say something different than billions before us... and they had couple thousand of years to do that.
+<p>
+<p>
+Due to size and effort invested in current systems - I believe that recreating might be a wasted effort, and instead we need to focus on what was done good and build on top of it.
+The only way to do it - is to improve our cooperation, promote talent and single direction/vision, improve pride in workmanship and remove waste.
+</p>
+  </div>
+		
+		
+  <!-- Goals
+  ================================================== -->
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="goals">Goals</h1>
+    </div>
+    <p class="lead">This model was build with 4 major goals: cooperation, talent, pride and waste removal:</p>
+	
+	<div class="panel panel-default">
+		<div class="panel-heading">Improve cooperation, by promoting commitment of all participants</div>
+		<div class="panel-body">
+			<ul>
+				<li>No pigs and chickens: everybody is involved, committed and responsible</li>
+				<li>Lack of balance and responsibility for the decision - might influence morale and engagement. Everyone should be committed at the same level as we all share the same goal.</li>
+				<li>Every decision is made in pairs, which promotes cooperation and shared responsibility / commitment.</li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="panel panel-default">
+		<div class="panel-heading">Promote talent and innovation while providing single direction/vision</div>
+		<div class="panel-body">
+			<ul>
+				<li>Best people are selected for the job.</li>
+				<li>Nobody knows stakeholder requirements better than person that gathered them, as well as nobody knows technology as technical people.</li>
+				<li>BA provides business requirements knowledge to the team while Tech Lead/ SMEs provide technical leadership and direction.</li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="panel panel-default">
+		<div class="panel-heading">Promotion of responsibility, involvement and pride in workmanship</div>
+		<div class="panel-body">
+			<ul>
+				<li>Pairs have equal impact on the project, which promotes responsibility and involvement.</li>
+				<li>Shared responsibility, removal of waste and promotion of talent - improves pride in workmanship.</li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="panel panel-default">
+		<div class="panel-heading">Providing visibility of waste and continuous improvement of process</div>
+		<div class="panel-body">
+			<ul>
+				<li>Ability to see where things went wrong and improve it in the next cycle.</li>
+				<li>Every decision is recorded, impact is analysed and waste identified (during cycle end).</li>
+			</ul>
+		</div>
+	</div>
+
+  </div>
+  
+  <!-- Guidelines
+  ================================================== -->
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="guidelines">Guidelines</h1>
+    </div>
+	
+	<h3 id="guidelines-model">Model</h3>
+	<blockquote class="alert-info">
+		<p>Model consists of cycles</p>
+		<small>Provides control over development, adaptability to requirements change and visibility of result</small>
+	</blockquote>
+	
+	<blockquote class="alert-info">
+		<p>Cycle consists of 4 phases</p>
+		<small>Phases provides separation of responsibilities and process under control</small>
+	</blockquote>
+	
+	<blockquote class="alert-info">
+		<p>During 3rd phase - new cycle is started (so-called sub-cycle)</p>
+		<small>The goal is to provide supply for the next cycle (while current cycle is "constructed")</small>
+	</blockquote>
+	
+	<blockquote  class="alert-info">
+		<p>Length of cycle cannot be less than 2 weeks</p>
+		<small>Very short cycles won't give enough time to perform all activities efficiently</small>
+		<small>For support tasks – 2 week cycle is allowed, but amount of checkpoints should be decreased to 1-2</small>
+		<small><strong><a href="kaizen-lite.html">Kaizen Lite</a></strong> model is introduced to meet requirements of support tasks</small>
+	</blockquote>
+	
+	<blockquote class="alert-info">
+		<p>It is recommended that length of cycle won't be longer than 2 month</p>
+		<small>Long cycles would eliminate visibility and might slide into endless development</small>
+	</blockquote>
+	
+	<blockquote class="alert-info">
+		<p>Every cycle is both functionality and time boxed</p>
+		<small>Functionality is important as it delivers value to the customer</small>
+		<small>Time is important as it influences deadline and budget of the product</small>
+	</blockquote>
+	
+	<blockquote class="alert-info">
+		<p>PM/TL set direction (manage), BA/Tech Lead provide vision (requirements/architecture) and SME/Team provide construction</p>
+		<small>It is important to select best people for the task. This approach allows using best talent and experience for the task and, therefore, decreases possible waste</small>
+	</blockquote>
+	
+	<blockquote class="alert-info">
+		<p>Direction, vision and construction is done in "pairs"</p>
+		<small>Project manager and Team Leader (together) provide direction</small>
+		<small>Business Analyst and Technical Leader (together) provide vision</small>
+		<small>SME's and Team (together) provide construction</small>
+	</blockquote>
+	
+	<blockquote class="alert-info">
+		<p>Working in pair promotes peer review and cooperation</p>
+		<small>Cooperation of roles (work in pairs) is crucial part of the model/project as it improves cooperation between business and IT, allows peer review and ensures that needs/constraints of business/technology are taken into account</small>
+	</blockquote>
+	
+	<h3 id="guidelines-milestones">Milestones</h3>
+	<blockquote class="alert-info">
+		<p>Milestones - are tasks which are needed to be implemented within cycle</p>
+		<small>Milestones are integral part of the system. It is smallest part (building block) of the project</small>
+	</blockquote>
+	
+	<blockquote class="alert-info">
+		<p>Milestones are defined by Business Analyst and Technical Lead</p>
+		<small>BA delivers business requirements and technical lead compiles technical requirements</small>
+		<small>Milestones are put into <strong>Milestones log</strong></small>
+	</blockquote>
+	
+	<blockquote class="alert-info">
+		<p>Recommended maximum duration of milestone is 1 week</p>
+		<small>Long milestones are hard to design, harder to modify (after requirements change) and are prone to be left uncompleted due to time constraints.</small>
+	</blockquote>
+	
+	<blockquote class="alert-info">
+		<p>Change in requirements, during development phase, results in its move to the next cycle</p>
+		<small>Such change require additional requirements clarification and re-evaluation of technical solution/design</small>
+	</blockquote>
+	
+	<blockquote class="alert-info">
+		<p>Showcase/presentation should be performed after milestone delivery</p>
+		<small>Presentation improves visibility for business and confirms that it is implemented according to expectations</small>
+	</blockquote>
+	
+	<blockquote class="alert-info">
+		<p>Functionality first, optimization - after</p>
+		<small>Milestone should deliver functionality (value for the customer), optimization should be performed after the delivery (during last phase of the cycle)</small>
+		<small>Basic Unit/Integration tests should be delivered along with the milestone</small>
+		<small>Advanced/deep Unit/Integration tests should be delivered after optimization (last phase)</small>
+	</blockquote>
+
+	<h3 id="guidelines-ba">Business Analyst (BA)</h3>
+	<blockquote class="alert-info">
+		<p>Produces business requirements</p>
+		<small>Business Analysts analyse vision and requirements of Stakeholders and compiles business requirements based on it</small>
+	</blockquote>
+	
+	<blockquote class="alert-info">
+		<p>Co-produces milestones</p>
+		<small>Based on business requirements, in cooperation with Technical Lead, produces milestones and adds them into Milestones log</small>
+	</blockquote>
+	
+	<blockquote class="alert-info">
+		<p>Available for requirements clarification</p>
+		<small>If some requirements are not clear, unavailability of BA to clarify them - would lead to assumptions and delivery of product not according to expectations</small>
+	</blockquote>
+	
+	<blockquote class="alert-info">
+		<p>Keep workload under control (remove muri)</p>
+		<small>Role vital for the project as it provides business view and requirements; therefore cannot be overloaded </small>
+		<small>If needed - some milestones can be moved to next cycle</small>
+	</blockquote>
+
+	<h3 id="guidelines-tech-lead">Technical Lead</h3>
+	<blockquote class="alert-info">
+		<p>Produces architecture / high level design based on business requirements</p>
+		<small>Analyses business requirements and produces architecture / high level design for milestones / system</small>
+	</blockquote>
+	
+	<blockquote class="alert-info">
+		<p>Produces technical requirements (for team) based on architecture/design</p>
+		<small>Based on produced architecture / high level design - produces technical requirements for team to follow</small>
+	</blockquote>
+	
+	<blockquote class="alert-info">
+		<p>Technical Lead deliverables are reviewed / validated by SME</p>
+		<small>Working in pairs provide peer review, validation and improves final technical solution</small>
+	</blockquote>
+	
+	<blockquote class="alert-info">
+		<p>Co-produces milestones</p>
+		<small>Based on architecture / high level design, in cooperation with Business Analyst - produces milestones and adds them into Milestones log</small>
+	</blockquote>
+
+	<blockquote class="alert-info">
+		<p>Develops POC's, prototypes and shared services</p>
+		<small>Confirms high level design/architecture solution and provides practical examples for other team members</small>
+	</blockquote>
+
+	<blockquote class="alert-info">
+		<p>Provides unified technical view/direction for project/service</p>
+		<small>Defines technical direction for project and components/services of the system</small>
+	</blockquote>
+	
+	<blockquote class="alert-info">
+		<p>Available for requirements clarification</p>
+		<small>If some requirements are not clear, unavailability of Tech Lead to clarify them - would lead to assumptions and delivery of product with incorrect implementation</small>
+	</blockquote>
+	
+	<blockquote class="alert-info">
+		<p>Keep workload under control (remove muri)</p>
+		<small>Role vital for the project as it provides technical direction/vision for whole project; therefore cannot be overloaded </small>
+		<small>If needed - some milestones can be moved to next cycle</small>
+	</blockquote>
+	
+	<h3 id="guidelines-pm">Project Manager (PM)</h3>
+	<blockquote class="alert-info">
+		<p>Co-manages direction of the project</p>
+		<small>Along with Team Leader - manages/controls direction of the project</small>
+	</blockquote>
+	
+	<blockquote class="alert-info">
+		<p>Communication with business regarding project progress</p>
+		<small>Communicate to the business progress/risks/issues/waste</small>
+	</blockquote>
+	
+	<blockquote class="alert-info">
+		<p>Tracking waste of the project (business) and compiling recycle plan</p>
+		<small>Provide detailed log of waste on business side and co-created recycle plan during cycle end (last checkpoint)</small>
+	</blockquote>
+	
+	<blockquote class="alert-info">
+		<p>Can manage few projects</p>
+		<small>Teams are meant to be self sufficient and amount of managing should be kept at minimum</small>
+		<small>Load (per project) for Project Manager is relatively low, so it is allowed to work on few projects at the same time</small>
+	</blockquote>
+
+	<h3 id="guidelines-tl">Team Leader (TL)</h3>
+	<blockquote class="alert-info">
+		<p>Co-manages direction of the project</p>
+		<small>Along with Project Manager - manages/controls direction of the project</small>
+	</blockquote>
+	
+	<blockquote class="alert-info">
+		<p>Communicates with Developers regarding changes/decisions/progress of the project</p>
+		<small>Communicate to the team progress/changes/decisions/risks/issues/waste</small>
+	</blockquote>
+	
+	<blockquote class="alert-info">
+		<p>Tracking waste of the project (technical) and compiling recycle plan</p>
+		<small>Provide detailed log of waste on technical side and co-created recycle plan during cycle end (last checkpoint)</small>
+	</blockquote>
+	
+	<blockquote class="alert-info">
+		<p>Can manage few projects or perform technical responsibilities</p>
+		<small>Teams are meant to be self sufficient and amount of managing should be kept at minimum</small>
+		<small>Load (per project) for Team Leader is relatively low, so it is allowed to perform SME's responsibilities or work on multiple projects</small>
+	</blockquote>
+
+	<h3 id="guidelines-sme">Subject Matter Expert (SME's)</h3>
+	<blockquote class="alert-info">
+		<p>Provides technical validation / assistance to Technical Lead in defining architecture / high level design</p>
+		<small>Working in pairs provide peer review, validation and improves final technical solution</small>
+	</blockquote>
+	
+	<blockquote class="alert-info">
+		<p>In cooperation with Technical Lead or another SME defines low level design</p>
+		<small>Working in pairs allows to perform peer review and remove possible technical waste</small>
+	</blockquote>
+	
+	<blockquote class="alert-info">
+		<p>Develops POCs, prototypes, shared services and works directly on implementation</p>
+		<small>Confirms design solution and provides practical examples for other team members</small>
+	</blockquote>
+	
+	<blockquote class="alert-info">
+		<p>Is selected for role based on skills and experience to provide unified technical view/direction and technical expertise</p>
+		<small>The main responsibility of this role is to drive technical implementation for whole team and provide technical expertise/advices/trainings(if possible)</small>
+	</blockquote>
+	
+	<blockquote class="alert-info">
+		<p>Works together with the team on implementation and is involved in daily meetings</p>
+		<small>As part of construction group - involved in construction / implementation</small>
+	</blockquote>
+
+	<h3 id="guidelines-team">Team</h3>
+	<blockquote class="alert-info">
+		<p>Team is self organization "role" which is responsible for implementation</p>
+		<small>Is most vital part of every project as it translates "need" into "result" and is responsible for delivering value to the customer</small>
+	</blockquote>
+	
+	<blockquote class="alert-info">
+		<p>Team is self organizing and independent role</p>
+		<small>Promote responsibility, involvement and pride in workmanship</small>
+		<small>Avoids micromanaging (although Team Leader might help in providing some direction)</small>
+	</blockquote>
+	
+	<blockquote class="alert-info">
+		<p>Size of team should be relatively small to keep it lean and agile</p>
+		<small>Keeping team small improves management, communication and cooperation</small>
+	</blockquote>
+	
+	<blockquote class="alert-info">
+		<p>Team should have daily meetings to keep everybody updated</p>
+		<small>Daily meetings provide synchronization on work done, issues and allows avoiding development conflicts</small>
+		<small>TL compiles daily meeting notes based on feedback of team members <strong>before</strong> daily meeting</small>
+		<small>Daily meetings are capped at 15 minutes and should be interrupted afterwards (meeting notes should be sent and would allow to catch up)</small>
+	</blockquote>
+	
+	<blockquote class="alert-info">
+		<p>Keeps constant contact with Business Analyst and Technical Lead</p>
+		<small>Constant cooperation with BA and Tech Lead would allow to deliver according to business expectation and according to best technical solutions</small>
+	</blockquote>
+	
+  </div>
+  
+  <!-- Decisions / Responsibilities
+  ================================================== -->
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="decisions">Decisions / Responsibilities</h1>
+    </div>
+	
+	<p class="lead">While ideas / decisions are vital for survival of the project / company, unlike any physical entity, decisions / ideas cannot be measured and are compared solely against common sense / opinions of other people.</p>
+	<p class="lead">Also given that current projects are huge and one person might not be able to take into account everything - this model promotes for roles to work in cooperation with each other.
+	<strong>Cooperation is vital part of this model, and failure to follow it - would lead to failure of it in your project.</strong></p>
+	
+	<h3 id="decisions-pairs">Pairs</h3>
+	
+	<dl class="dl-horizontal">
+		<dt>Vision</dt>
+		<dd>
+			<p>
+				Vision for the project is created by pair Business Analyst and Technical Lead
+			</p>
+		</dd>
+		
+		<dt>Direction</dt>
+		<dd>
+			<p>
+				Direction for the project is controlled by Project Manager and Team Leader
+			</p>
+		</dd>
+		
+		<dt>Construction</dt>
+		<dd>
+			<p>
+				Construction / implementation of the project is performed by SME's and Team.
+			</p>
+		</dd>
+	</dl>
+	
+	<h3 id="decisions-responsibilities">Responsibilities</h3>
+	
+	<dl class="dl-horizontal">
+		<dt>Business Analyst</dt>
+		<dd>
+			<ul>
+				<li>Compiles business requirements</li>
+				<li>Co-creates milestones</li>
+				<li>Milestones log co-owner</li>
+			</ul>
+		</dd>
+		
+		<dt>Technical Lead</dt>
+		<dd>
+			<ul>
+				<li>Creates architecture / high level design (with support from SME)</li>
+				<li>Compiles technical requirements</li>
+				<li>Develops POC's, prototypes and shared services</li>
+				<li>Co-creates milestones</li>
+				<li>Milestones log co-owner</li>
+			</ul>
+		</dd>
+		
+		<dt>Project Manager</dt>
+		<dd>
+			<ul>
+				<li>Co-manages direction of the project</li>
+				<li>Risks log co-owner</li>
+				<li>Debt log co-owner</li>
+				<li>Recycle plan co-owner</li>
+			</ul>
+		</dd>
+		
+		<dt>Team Leader</dt>
+		<dd>
+			<ul>
+				<li>Co-manages direction of the project</li>
+				<li>Risks log co-owner</li>
+				<li>Debt log co-owner</li>
+				<li>Recycle plan co-owner</li>
+			</ul>
+		</dd>
+		
+		<dt>SME's</dt>
+		<dd>
+			<ul>
+				<li>Supports Technical Lead with architecture creation</li>
+				<li>Co-creates low level design</li>
+				<li>Develops POC's, prototypes and shared services</li>
+				<li>Involved in implementation</li>
+				<li>Issues log co-owner</li>
+			</ul>
+		</dd>
+		
+		<dt>Team</dt>
+		<dd>
+			<ul>
+				<li>Responsible for implementation</li>
+				<li>Issues log co-owner</li>
+			</ul>
+		</dd>
+	</dl>
+	
+  </div>
+  
+  <!-- Four phases of the cycle
+  ================================================== -->
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="phases">Four phases of the cycle</h1>
+    </div>
+	
+	<p class="lead">It is assumed that project was “shaped” before starting development cycle: business modelling was concluded (scope, definition, budget, schedule etc.).</p>
+	
+	<div class="row">
+		<div class="col-md-10">
+			<img src="assets/ico/phases-cycles.png" class="img-responsive"/>
+		</div>
+	</div>
+	
+	<hr class="bs-docs-separator">
+	
+	<div class="row">
+		<div class="col-md-2">
+			<img src="assets/ico/phases-short.png" class="img-responsive"/>
+		</div>
+		<div class="col-md-10">
+			<div class="well well-sm"><strong>Requirements</strong> compilation (both business and technical)</div>
+			<div class="well well-sm"><strong>Planning</strong> and preparation for construction / implementation</div>
+			<div class="well well-sm"><strong>Construction</strong> of the milestones</div>
+			<div class="well well-sm"><strong>Delivery</strong> of the milestones</div>
+		</div>
+	</div>
+	
+	<h3 id="phases-egg" class="text-center">Requirements (egg)</h3>
+	
+	<ul class="list-group">
+		<li class="list-group-item">Compilation of business requirements</li>
+		<li class="list-group-item">Creation of architecture / high level design</li>
+		<li class="list-group-item">Definition of technical requirements</li>
+		<li class="list-group-item">Filling up of Milestones log</li>
+	</ul>
+	
+	<h3 id="phases-pupa" class="text-center">Planning (pupa)</h3>
+	
+	<ul class="list-group">
+		<li class="list-group-item">Revision of recycle plan</li>
+		<li class="list-group-item">Definition of milestones per current cycle</li>
+		<li class="list-group-item">Working with SME / Team to assign milestones and prepare estimations</li>
+		<li class="list-group-item">Risks definition</li>
+	</ul>
+	
+	<h3 id="phases-meta" class="text-center">Construction (metamorphosis)</h3>
+	
+	<ul class="list-group">
+		<li class="list-group-item">Daily progress update</li>
+		<li class="list-group-item">Definition of low level design</li>
+		<li class="list-group-item">Implementation of the milestones</li>
+		<li class="list-group-item">Brief showcase of milestones</li>
+	</ul>
+	
+	<h3 id="phases-birth" class="text-center">Delivery (birth)</h3>
+	
+	<ul class="list-group">
+		<li class="list-group-item">Presentation of delivered milestones to BA/Technical Lead</li>
+		<li class="list-group-item">Optimization and additional unit/integration tests development</li>
+		<li class="list-group-item">QA and Deploy</li>
+		<li class="list-group-item">Reflection upon cycle and recycle plan definition</li>
+	</ul>
+  </div>
+  
+  <!-- Waste tracking
+  ================================================== -->
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="waste">Waste tracking</h1>
+    </div>
+	
+	<h3 id="waste-debt">Debt</h3>
+	
+	<div class="col-md-12"><p>
+			Debt is tracked per entity (business / IT)
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>Will allow to separate two types of waste and analyse/address them in more efficient way</small></p>
+	</div>
+	
+	<div class="col-md-12"><p>
+			Debt owners are PM (business) and TL (technical)
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>In case of questions – they are first contact point and can make final decision about respective debt</small></p>
+			<p><small>Secondary debt owners are BA (business) and Tech Lead (technical). In case first contact point is not available – secondary contact point can answer questions and make final decision about respective debt</small></p>
+	</div>
+	
+	<div class="col-md-12"><p>
+			Setting limit for debt is not mandatory, but if one is set – after meeting it – restart of cycle is required
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>Limiting amount of waste per cycle allowed is good idea and would allow restart cycle with “clean sheet”</small></p>
+	</div>
+	
+	<div class="col-md-12"><p>
+			Pairs principle applies in here as well. It is crucial to have agreement from both sides and without mutual agreement – debt is not modified.
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>If possible/current waste was identified by <strong>Vision</strong> team - they make mutual decision about adding it to the Debt log</small></p>
+			<p class="col-md-offset-1"><small>Example: if BA wasn't able to finish with business requirements and requested for this milestone to be included in current cycle – waste is on business side and should be added to business debt.</small></p>
+			<p class="col-md-offset-1"><small>Example: if Tech Lead wasn't able to finish with technical requirements and requested for this milestone to be included in current cycle – waste is on technical side and should be added to technical debt.</small></p>
+			
+			<p><small>If possible/current waste was identified by <strong>Direction</strong> team - they make mutual decision about adding it to the Debt log</small></p>
+			<p class="col-md-offset-1"><small>Example: if PM requested to perform additional and/or undefined report (additionally to existing ones / above standard requirement) – waste is on business side and should be added to business debt.</small></p>
+			<p class="col-md-offset-1"><small>Example: if TL haven't submitted check-list for code review and requested to perform it without one – waste is on technical side and should be added to technical debt.</small></p>
+			
+			<p><small>If possible/current waste was identified by <strong>Construction</strong> team - they make mutual decision about adding it to the Debt log</small></p>
+			<p class="col-md-offset-1"><small>Example: if Technical Lead offers solution with which SME's / Team does not agree, but are requested to implement it – debt is recorded. </small></p>
+			<p class="col-md-offset-1"><small>Example: if SME offers implementation with which Team does not agree, but are requested to implement it – debt is recorded.</small></p>
+	</div>
+	
+	<div class="col-md-12"><p>
+			During final phase of cycle – debt should be analysed and waste removal strategy should be set for next cycle
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>Debt analysis is not just one of the most important aspects of final phase, but the whole cycle as well</small></p>
+			<p><small>If the same items appear in debt log more that two cycles in a row - process should be analysed and improved</small></p>
+	</div>
+	
+	<div class="col-md-12"><p>
+			<strong>And please don't forget - be nice!</strong>
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>Goal of debt is not to track somebody's mistakes, but is to track waste so we won't have to go through the same issues the next time</small></p>
+	</div>
+	
+	<br/>
+	
+	<h3 id="waste-checkpoints">Checkpoints</h3>
+	
+	<br/>
+	
+	<p class="">Checkpoints are meant to help you evaluate current situation and update risks, issues and debt log.</p>
+	
+	<p class="">Debt log owners (<strong>Direction</strong> pair) should participate in every checkpoint. Meeting should have predefined duration. By default every phase is ended by a checkpoint:</p>
+	
+	<div class="col-md-12"><p>
+			<strong>Requirements (egg):</strong>
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p>Recommended duration is 1h. Pair BA+Tech Lead (with PM+TL) analyse progress so far and discuss/update risks, issues and debt log.</p>
+	</div>
+	
+	<div class="col-md-12"><p>
+			<strong>Planning (pupa):</strong>
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p>Recommended duration is 2h. PM+TL with BA+Tech Lead analyse progress so far and discuss/update risks, issues and debt log.</p>
+	</div>
+	
+	<div class="col-md-12"><p>
+			<strong>Construction (metamorphosis):</strong>
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p>Recommended duration is 2h. Team+SME's with PM+TL reflect upon progress so far and discuss/update risks, issues and debt log.</p>
+	</div>
+
+	<div class="col-md-12"><p>
+			<strong>Delivery (birth):</strong>
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p>Recommended duration is 4-8h. Everybody reflects upon progress so far and discusses/updates risks, issues and debt log. Next step - would be final vote of debt value (details in logs section). Afterwards - all logs should be analysed and recycle plan should be compiled. It is important to look at dynamics in all logs (between phases) and trace risks which became issues; issues which left unattended and generated debt; and debt which was valued as low but turned out to be very high.</p>
+	</div>
+	
+	<p>In case when cycle length is set to 2 weeks - it is recommended to at least keep last checkpoint and decrease it's duration.</p>
+	<p>Every additional checkpoint can be set depending on project needs.</p>
+
+  </div>
+  
+  <!-- Logs
+  ================================================== -->
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="logs">Logs</h1>
+    </div>
+	
+	<p class="">Usually every log is available for everyone, but update is performed by log owners; by their own volition or by request from other member. 
+	That brings benefits as owner might ask additional questions, provide addition opinion/view and would be aware of all items in the log. 
+	Consequently this would allow for everybody to have single contact point regarding items in the logs.</p>
+	
+	<p>
+	Even though every log have it's owner – <strong>Direction</strong> pair could frequently review them and discuss it with owners.
+	</p>
+
+	<p>
+	If it wasn't done during phases - it is advisable to update logs during every checkpoint, which means, by default, that they should be updated at least 4 times per cycle.
+	</p>
+	
+	<h3 id="logs-milestones">Milestones log</h3>
+	<div class="col-md-11 col-md-offset-1">
+			<p>Milestones log owner is <strong>Vision</strong> pair. Amount of milestone details is defined on per project basis: 
+			for short cycles and cases where developers have good understanding of business and technical requirements – amount of details can be kept to minimum, 
+			but as amount of milestones and/or size of time rises – it is very important to provide sufficient amount of details (might need consultation with a Team). 
+			It is better to overdo rather than provide too little information.</p>
+	</div>
+	
+	<h3 id="logs-risks">Risks log</h3>
+	<div class="col-md-11 col-md-offset-1">
+			<p>Risks log owner is <strong>Vision</strong> and <strong>Direction</strong> pairs. 
+			Risks log can be filled according to any preferred Project Management standard template.</p>
+	</div>
+	
+	<h3 id="logs-issues">Issues log</h3>
+	<div class="col-md-11 col-md-offset-1">
+			<p>Issues log owner is <strong>Construction</strong> pair with possible support from <strong>Direction</strong> pair. 
+			Issues log is filled according to any preferred Project Management standard template.</p>
+	</div>
+	
+	<h3 id="logs-debt">Debt log</h3>
+	<div class="col-md-11 col-md-offset-1">
+			<p>Debt log owner is <strong>Direction</strong> pair. Every debt log should keep description of the debt (enough to identify it to outside party) with 3 values:
+			perceived debt value (provided by requester), perceived debt value (provided by <strong>Direction</strong> pair) and final value - actual debt value - would be defined and entered
+			during last checkpoint.	During said checkpoint meeting – every item in debt log is voted (by everyone) and actual debt value is entered. 
+			By doing so - we could visualize the difference between perceived debt (during development) and actual debt of the project which, in turn, would allow us to identify "icebergs" and "overblown" debt and compile Recycle plan accordingly.</p>
+	</div>
+	
+	<h3 id="logs-recycle">Recycle plan</h3>
+	<div class="col-md-11 col-md-offset-1">
+			<p>Recycle plan owner is <strong>Direction</strong> pair. 
+			It is the one of the most important part of delivery (birth) phase and it is strongly advisable to include everyone in discussion and brainstorming sessions. 
+			Risks and issues logs (from all checkpoints) are analysed, as it is important to understand which risks turned into issues and, consequently, which issues created debt. 
+			After debt log goes through voting and perceived debt was compared (by everyone) with actual debt - improvement plan is compiled.
+			Debt log serves as main source of information and ordering for recycle plan.</p>
+	</div>
+	
+	<p><br/></p>
+	
+  </div>
+  
+  <!-- Visualize
+  ================================================== -->
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="visualize">Visualize</h1>
+    </div>
+	
+	<p>It is very important to visualize your current process to see work done and make adjustment when needed.
+	By visualizing you will be able to see process more clearly, you will be able to visualize impact of issues on your project and track waste more effectively.</p>
+	<p>There are a lot of online tools out there, which would allow you to visualize your work flow and it is highly recommended that you select one (which suits you best).</p>
+	
+	<h3 id="visualize-kanban">Kanban method</h3>
+	<p>As you've seen by now - this model inherits features from few existing methodologies / processes / models one of which is Lean process;
+	Kaizen model is highly focused on waste tracking and removal, which is one of the priorities of Lean process as well. 
+	Kanban method works well with Lean and, by inheritance, works great with this model as they share the same goal.</p>
+	
+	<p>It is very advisable to use Kanban method and Kanban board with this model, as it would help focus on topics that are outside of scope of this document and significantly improve organization / visibility which, as a result, would substantially improve efficiency of process as a whole.</p>
+  </div>
+  
+  <!-- Best practises
+  ================================================== -->
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="best-practises">Best practises</h1>
+    </div>
+	
+	<p>This chapter was meant to share experience and advice to increase delivery of value and decrease waste</p>
+	<p><strong><em>I really hope that this chapter would significantly grow over time...</em></strong></p>
+	
+	<h2 id="practises-do" class="text-center">DO's</h2>
+	<p class="text-center"><small><strong>(deliver value)</strong></small></p>
+	
+	<h3>Business</h3>
+	
+	<div class="col-md-12"><p>
+			Group teams by interests to increase productivity
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>When people share same interests and goals, they become connected to their co-workers - which usually leads to more positive work atmosphere and experience</small></p>
+	</div>
+	
+	<div class="col-md-12"><p>
+			Don't get carried away with documentation. Gigabytes of useless files won't help understand system. Keep it short and simple, and utilize Wiki as much as possible
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>Big amount of documentation with no proper search system increases learning curve and amount of time spent with no guarantee that needed information would actually be found</small></p>
+			<p><small>Failure to find relevant information would require to contact somebody in order to get it, which, consequently, creates additional unplanned workload on that person and creates dependency for the project</small></p>
+			<p><small>Incorrect/outdated document might lead to incorrect solutions and implementations</small></p>
+	</div>
+
+	<div class="col-md-12"><p>
+			Monitor market and select decisions according to current practices and available resources within the company/market
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>Sometimes it is better to use little older technology instead of spending huge amount of time recruiting people with right knowledge</small></p>
+			<p><small>Some newest technologies might not be ready for that specific usage</small></p>
+	</div>
+
+	<div class="col-md-12"><p>
+			Do self assessment often
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>The cheapest way is to ask another(more experienced) department/entity to look at your current processes and procedures.</small></p>
+			<p><small>Try to get feedback from your partners as they might be able to evaluate your entity from different perspective</small></p>
+	</div>
+	
+	<div class="col-md-12"><p>
+			Talk with newcomers (especially with >5 years of experience) and ask what they think about current processes/procedures
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>During first few month every small detail/change is very visible for newcomer and you might want to reuse that fact to improve your process/standards/procedures/tools etc.</small></p>
+			<p><small>Every newcomer comes with their experience from previous workplace and might offer solution to the your problem which was already successfully tackled there</small></p>
+	</div>
+	
+	<div class="col-md-12"><p>
+			Close the understanding gap between Business and IT, as it would increase understanding and cooperation between them
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>For those who are interested - teach engineers business side of the company</small></p>
+			<p><small>For those who are interested – provide some basic technical seminars</small></p>
+			<p><small>Understanding business goals and what brings value for customer might improve final product produced by engineers</small></p>
+			<p><small>Understanding basic technical limitations/constraints/challenges might make requirements, produced by business, more feasible and easier to implement</small></p>
+	</div>
+	
+	<div class="col-md-12"><p>
+			Invest into HR and do not overload them
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>Selecting right people requires effort, time and proper procedures</small></p>
+			<p><small>Right people would require less management, would be more motivated and would deliver better product with good quality</small></p>
+			<p><small>On other side – incorrect people would require more managing, would be unsatisfied and unhappy and might not be able to deliver good quality</small></p>
+	</div>
+	
+	<div class="col-md-12"><p>
+			Promote pride in workmanship
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>"Tie" process with positive emotions and unite everyone under single goal</small></p>
+			<p><small>Pride in workmanship increases involvement and productivity</small></p>
+			<p><small>Improves cooperation as everybody share the same goal</small></p>
+	</div>
+	
+	<div class="col-md-12"><p>
+			Enterprises and innovation - get maximum benefits with minimal impact
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>It is easier to change 20% of company by 80%, than change 80% by 20%</small></p>
+			<p><small>Due to size - experiments cannot be performed on huge scale. Start with small entities as proof of concept</small></p>
+			<p><small>Enterprises are slow to change due to size, and change should be started at most agile/lean/adaptive entities and slowly spread across the company</small></p>
+			<p><small>Entities are most eager to change - absorb change most efficiently, others - not so much</small></p>
+			<p><small>Due to their eagerness to change and adaptability - experience of successful entities might not be completely copied to less successful ones</small></p>
+			<p><small>During application of experience of most successful entities (that 20%) - adapt solution on the fly to meet demands of 80%. Not everyone has capacity/experience/skills to change as quickly and efficiently as the most successful ones</small></p>
+			
+	</div>
+	
+	<div class="col-md-12"><p>
+			It is very beneficial to have guidelines for roles
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>Guidelines would shorten learning curve and would allow to work more efficiently for newcomers</small></p>
+			<p><small>Guidelines would allow to avoid responsibility conflicts, as it would clearly state most important responsibilities and guide its implementation</small></p>
+	</div>
+	
+	<div class="col-md-12"><p>
+			Control the direction of the meetings
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>Meetings are great way to share knowledge and communicate between group of people, but if it goes out of the control, in future, it might hurt cooperation</small></p>
+			<p><small>Meeting chair should be trained to control and mitigate possible issues during the meetings</small></p>
+	</div>
+	
+	<h3>IT</h3>
+	
+	<div class="col-md-12"><p>
+			Invest into teaching and skills of your resources
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>IT is constantly changing and just in five years technology may become deprecated, that's why it is important to invest constantly into skills of your resources</small></p>
+			<p><small>Technical presentations/seminars to improve presentation skills for those who want</small></p>
+	</div>
+	
+	<div class="col-md-12"><p>
+			<em>Tell me and I'll forget; show me and I may remember; involve me and I'll understand</em>
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>Showing/presentation alone isn't the most effective form of training</small></p>
+			<p><small>Showing/presentation should be used in conjunction with practical exercises during or right after the training</small></p>
+	</div>
+		
+	<div class="col-md-12"><p>
+			Create atmosphere of achievement
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>Creating proper atmosphere would drive people to constantly innovate and create better products</small></p>
+			<p><small>It is very tricky, but with right team and atmosphere - will promote creativity and innovation</small></p>
+	</div>
+
+	<div class="col-md-12"><p>
+			Try to define shared services and implement them during early stages of construction
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>This is place where most implementations miss opportunity to simplify system and should be part of strategy for every project</small></p>
+			<p><small>Shared services would provide guidelines, increase efficiency and decrease time/budget of the project</small></p>
+	</div>
+	
+	<div class="col-md-12"><p>
+			As it was proven by industry more than once – create API first, as it would simplify usage and cooperation between teams
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>Keep API simple and avoid exposing internal implementation</small></p>
+			<p><small>Outside teams should be able to use it without additional explanation and won't be needing to gain knowledge of underlying system</small></p>
+	</div>
+	
+	<div class="col-md-12"><p>
+			Involve employees into problem detection as well as solution search
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>Employees have first hand experience with those problems as they fight them on daily basis</small></p>
+			<p><small>Experience fighting those problems on daily basis provides them with needed expertise to offer effective solution</small></p>
+	</div>
+	
+	<div class="col-md-12"><p>
+			The greatest ideas were already shared long time ago (don't generate ideas for ideas sake), instead focus on great implementation
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>Try to focus not only on ideas, but also ask people about what value they can bring to customer (in short/mid/long term)</small></p>
+			<p><small>Ask for ideas together with it's implementation/direction, as one cannot be done without the other</small></p>
+			<p><small>Process starts with right idea, but it is <strong>completed only with right implementation</strong></small></p>
+	</div>
+	
+	<div class="col-md-12"><p>
+			Use consultant services wisely
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>Involvement and investment into whole lifecycle of the product is important and would allow to make best decisions</small></p>
+			<p><small>Please be aware that outside consultant might not have complete understanding of the company's infrastructure, so additional training might be needed</small></p>
+			<p><small>If consultant is affiliated with some outside company – require proof of concept and integration with all existing services, as it is place where it fails most often</small></p>
+	</div>
+	
+	<div class="col-md-12"><p>
+			Select product/systems/services not only based on "adoption" budget, but also calculate "demise" budget for previous one
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>Adoption of new product/system/service is often connected to demise of previous one and should be measured</small></p>
+			<p><small>If new product/system/service won't be replacing but would served as addition – it would be needing additional support/resources and, again, should be measured</small></p>
+	</div>
+	
+	<div class="col-md-12"><p>
+			Performing changes while keeping in mind big picture
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>It is recommended that analysis to be performed not for task at hand - but for whole system</small></p>
+			<p><small>It is dangerous to create “local” solution which might increase complexity or even break existing system</small></p>
+			<p><small>For support tasks - please use <strong><a href="kaizen-lite.html">Kaizen lite</a></strong></small></p>
+	</div>
+	
+	<h2 id="practises-dont" class="text-center">DONT's</h2>
+	<p class="text-center"><small><strong>(remove waste)</strong></small></p>
+	
+	<h3>Business</h3>
+	
+	<div class="col-md-12"><p>
+			Complication brings additional challenges and expenses. Keep it simple.
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>Every additional element in the system/process requires additional maintenance/resources/support</small></p>
+			<p><small>Complicated system require more reporting / measuring / evaluation / planning and would require more support and maintenance</small></p>
+	</div>
+	
+	<div class="col-md-12"><p>
+			Perform knowledge transfer according to best process/procedures/policies
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>Chaotic knowledge transfer process might lead to incorrect implementation and consequent service failure</small></p>
+			<p><small>Everything is subjective - even learning process: we remember only our understanding of subject, but that might be a little different than author meant. With every subsequent retelling of the same story - additional elements are introduced to it. Please get knowledge from source if possible (from qualified trainer).</small></p>
+	</div>
+	
+	<div class="col-md-12"><p>
+			Performing responsibilities of other side might lead to failure/waste
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>Everyone is selected based on skills/experience need and failure to utilize that leads to failure/waste</small></p>
+			<p><small>Business cannot define technical architecture/design as they are not committed nor are responsible for it. Also they might not be fully aware of current technical requirements and technical solutions</small></p>
+			<p><small>IT cannot define business process/procedures as they are not committed nor are responsible for it. Also they might not be fully aware of current requirements and market</small></p>
+	</div>
+	
+	<div class="col-md-12"><p>
+			Avoid running IT as cost center
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>Saving money at beginning might result in more extensive/expensive support needed</small></p>
+			<p><small>Try to simplify, optimize and this would result in doing more with less</small></p>
+	</div>
+	
+	<div class="col-md-12"><p>
+			Both sides should work on same goal and stop giving answers based on what they think is expected from them
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>IT should stop saying “no” to everything, as this would lead to loss of competitiveness. Keep it balanced</small></p>
+			<p><small>Management should stop saying “yes” to everything, as it would lead to impossible projects and loss of money and competitiveness. Keep it balanced</small></p>
+	</div>
+	
+	<div class="col-md-12"><p>
+			Remember that reports does not bring value to customer
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>This is one of the biggest waste of enterprises. Keep it simple and short</small></p>
+			<p><small>Reports should be defined by Management before they are requested - as IT doesn't know what values are important to the business</small></p>
+			<p><small>Management should perform analysis of current/available systems and requests report which is possible with current infrastructure or request to create one (as separate project with separate budget)</small></p>
+	</div>
+	
+	<div class="col-md-12"><p>
+			Keep track of assignments set to the team
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>Sometimes assignments are given without synchronizing with others - which creates invisible overload on resources and might lead to failure of projects</small></p>
+			<p><small>One small task might not have big impact, but as experience shows - amount of tasks only grows with time and might be source of overload and waste for current project</small></p>
+			<p><small>Usage of few reporting tools at the same time provides additional stress as it requires constant attention, synchronization and time - and should be avoided as much as possible</small></p>
+	</div>
+	
+	<div class="col-md-12"><p>
+			Use appropriate process for appropriate project, don't overkill
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>Use formal process for middle and big projects</small></p>
+			<p><small>Use less formal process for small project, as usage of formal methods might result in project going over deadline/budget while not bringing any benefits</small></p>
+	</div>
+	
+	<div class="col-md-12"><p>
+			Be very carefully how you choose your first people for project as they will define direction/implementation of the project
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>Keep in mind that people promote people with skills similar to the ones they have</small></p>
+			<p><small>Every subsequent addition would be focused on learning rather than defining project</small></p>
+	</div>
+	
+	<div class="col-md-12"><p>
+			Meeting does not bring value to customer
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>They are vital for every project, but keeping them to minimum is essential</small></p>
+			<p><small>Too frequent meetings, which doesn't bring value to the team, might be exhausting and might impact quality</small></p>
+			<p><small>Get feedback from participants about frequency of meetings and define it based on needs and wishes</small></p>
+			<p><small>Define, where applicable, guidelines as they might guide meeting direction</small></p>
+	</div>
+	<div class="col-md-12"><p>
+			Don't put people out of their comfort zone
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>Practices used in Business might not work as well in IT</small></p>
+			<p><small>People working in Business and IT might not have the same interests, so try to adapt to each needs and provide comfortable atmosphere for everyone</small></p>
+	</div>
+	
+	<div class="col-md-12"><p>
+			Do not overload people
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>Overload is almost guaranteed source of waste</small></p>
+			<p><small>Perform assignment tracking and load tracking to properly assess load on a person</small></p>
+			<p><small>If no tracking system is available – get frequent feedback from every member directly</small></p>
+	</div>
+	
+	<div class="col-md-12"><p>
+			People like to work with the ones they feel comfortable with
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>Due to lack of understanding / limited cooperation - sometimes Business is not comfortable working with IT directly which, later, might result in waste</small></p>
+			<p><small>Try to manage atmosphere and cooperation between entities - so it would promote efficient cooperation</small></p>
+			<p><small>If business requirements were not transferred properly because of it – project/product and, consequently, business would suffer</small></p>
+	</div>
+	
+	<div class="col-md-12"><p>
+			Don't search panacea in fancy names and new versions
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>Sometimes update (new version) doesn't bring new features, but in the end it just increases complexity and decreases visibility</small></p>
+			<p><small>Migrating to new product should be justified by creating extensive proof of concept, not only by numbers provided by manufacturer</small></p>
+			<p><small>Marketing material have goal - sell. Please advise with SME's before making decisions</small></p>
+	</div>
+	
+	<div class="col-md-12"><p>
+			Adding people at late stage won't improve delivery date
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>Training, requirements clarifying, realigning of tasks, knowledge transfer and additional management require time and investment of current members</small></p>
+			<p><small>The reason behind late delivery - is lack of time/resources and increasing load on those people would only make delivery even later</small></p>
+	</div>
+	
+	<div class="col-md-12"><p>
+			Don't promote people to higher position to improve entity image “on paper”
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>People with not enough skills/experience might deliver/provide incorrect service and/or lead project into incorrect direction</small></p>
+			<p><small>People with not enough skills/experience would require more time to perform activities</small></p>
+			<p><small>Incorrect/inefficient knowledge might be transferred to other members and would increase waste generation within organization</small></p>
+	</div>
+	
+	<div class="col-md-12"><p>
+			Do not push/demand but provide/offer
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>First entity shouldn't demand knowledge of it's processes from second entity, as they have their own processes to follow and deadlines to keep</small></p>
+			<p><small>Instead of demanding – provide knowledge transfer/meetings for both sides to understand processes within each entity better</small></p>
+	</div>
+	
+	<div class="col-md-12"><p>
+			Don't follow manufacturing methodologies to letter
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>In manufacturing you are creating one product many times, where in software development you create new product every time</small></p>
+			<p><small>In manufacturing – before product is produced – single extensive R&D is performed, while in software development it is performed along with every implementation</small></p>
+	</div>
+	
+	<div class="col-md-12"><p>
+			Success is not exclusive domain of one entity (or don't take pride in workmanship)
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>Success is defined by numbers and sometimes the one who produces them tends to put it in it's favour</small></p>
+			<p><small>Taking full credit for success takes pride in workmanship from those who were involved in it</small></p>
+			<p><small>Because of above - decreases involvement, cooperation and quality of delivery</small></p>
+	</div>
+	
+	<div class="col-md-12"><p>
+			Not telling employees about their weaknesses/issues deprives them from opportunity to improve
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>If person haven't told that something is wrong - that person is right to assume that everything is done correctly and should be continued</small></p>
+			<p><small>Knowing your weaknesses/issues allows you to spend time on minimising/improving them</small></p>
+			<p><small>It is very sensitive matter and should be handled carefully</small></p>
+	</div>
+	
+	<div class="col-md-12"><p>
+			Conflict of responsibilities
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>The bigger the company - the most likely that occur</small></p>
+			<p><small>Might be significant source of business waste as some people won't know who to listen and what to do</small></p>
+			<p><small>Conflict of responsibility results in confusion, duplicated solutions, multiple decisions and not working solutions</small></p>
+			<p><small>Responsibilities should be clearly defined (on paper) and should be available for everyone to read (not only for that role)</small></p>
+			<p><small>During definition of responsibilities - other roles should be checked if there is no conflicts</small></p>
+	</div>
+
+	<div class="col-md-12"><p>
+			If you feel that you have to choose lesser evil - re-evaluate process from the beginning
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>Ending up with only bad choices means that (in any case) bad choice would be selected, and it is irrelevant that it was "lesser" evil</small></p>
+			<p><small>Process which lead to bad choices only - might be flawed and should be re-examined</small></p>
+	</div>
+	
+	<div class="col-md-12"><p>
+			Endless development
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>Ability to constantly submit new requirements and get new features is tempting and might result in endless stream of requests and, consequently, endless development</small></p>
+			<p><small>Before project start - describe what functionality is essential and control new feature requests</small></p>
+			<p><small>Predictable amount of work would result in predictable development timeline and deadline</small></p>
+	</div>
+	
+	<h3>IT</h3>
+	
+	<div class="col-md-12"><p>
+			Theory is not always enough, please mix it with practical/successful experience
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>Knowledge of technology without practical usage might produce waste, as majority of them have limitations which are not communicated ahead</small></p>
+			<p><small>Practical experience would allow more efficient usage of technology</small></p>
+	</div>
+	
+	<div class="col-md-12"><p>
+			If you feel that you have to choose lesser evil - re-evaluate solution from the beginning
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>Ending up with only bad choices means that (in any case) bad choice would be selected, and it is irrelevant that it was "lesser" evil</small></p>
+			<p><small>Solution which lead to bad choices only - might be flawed and should be re-examined</small></p>
+	</div>
+	
+	<div class="col-md-12"><p>
+			Perform proper knowledge transfer
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>It is important to have single understanding and vision to deliver quality product</small></p>
+			<p><small>Procedure for knowledge transfer should be established</small></p>
+			<p><small>Knowledge transfer require time to prepare, as well as willing <strong>and</strong> skilled member to perform it</small></p>
+			<p><small>Not every engineer born to be a trainer. Please nominate the ones with relevant skills, talents and will to perform it</small></p>
+	</div>
+	
+	<div class="col-md-12"><p>
+			Badly engineered shared/common services might be huge source of technical debt
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>Engineer shared/common services very carefully</small></p>
+			<p><small>If one (bad service) was identified - it should be assigned with high priority and, consequently, rewritten/improved</small></p>
+	</div>
+
+	<div class="col-md-12"><p>
+			If some of quality requirements are not possible to meet and those requirements cannot be amended - internal quality baseline might be defined and followed
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>It is better to follow less demanding (baseline) requirements, than don't follow anything</small></p>
+			<p><small>Requirements which impossible to meet impacts morale and lowers commitment to quality</small></p>
+			<p><small>Due to lack of commitment to quality and lower morale - pride of workmanship might be affected</small></p>
+	</div>
+	
+	<div class="col-md-12"><p>
+			Peer Review – proceed with caution
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>If code is checked by person without knowledge of requirements/system/design – waste might be introduced to the system</small></p>
+			<p><small>This model promotes pride in workmanship and claims that code is bad might have negative impact on cooperation between two members</small></p>
+	</div>
+	
+	<div class="col-md-12"><p>
+			Assemble teams with mixed experience
+	</p></div>
+	<div class="col-md-11 col-md-offset-1">
+			<p><small>High amount of junior members in the team would lead to lack of expertise and experience and, consequently, might lead to lower quality of delivery</small></p>
+			<p><small>High amount of senior members in the team would lead to lost opportunity to mentor and knowledge transfer to less experienced members</small></p>
+	</div>
+  </div>
+  
+  <!-- Prologue
+  ================================================== -->
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="prologue">Prologue</h1>
+	</div>
+	
+	<p class="text-center"><strong>Instead of Ending</strong></p>
+	<p>The same as every mechanism consists of same mechanical parts – every methodology have a lot in common. This comes from the fact that they all are trying to solve the same problem while selecting different approaches.</p>
+	<p>In the world where we don't want have one company to produce everything (monopoly), we want to wear different clothes, drive different cars, have different houses... and just to stay unique – I don't believe that there is something that would fit every purpose. Don't expect this model to work for every company, on every level and for every project - always select what fits best.</p>
+	<p>This model was meant to bring departments closer, remove waste and improve processes but please don't consider it (or any other model) as solution for problems within the company. Driver which crashed Volkswagen will definitely crash Ferrari as well, and will do it much more faster. Please prepare proper foundation before making any major changes in the processes.</p>
+	<p><br/></p>
+	<p>Even if you won't agree with model in general, I really hope you will be able to take something from it to improve processes / cooperation / commitment in your company.</p>
+	<p><strong>Thank you</strong></p>
+  </div>
+  
+  <!-- Feedback
+  ================================================== -->
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="feedback">Feedback</h1>
+    </div>
+	
+    <p class="lead">Below you can provide feedback, suggestions, questions regarding information posted on current page</p>
+
+    <script>
+        var idcomments_acct = 'd619d1a656c6b8bfc4fa56b9857e8a38';
+        var idcomments_post_id;
+        var idcomments_post_url;
+    </script>
+    <span id="IDCommentsPostTitle" style="display:none"></span>
+    <script type='text/javascript' src='http://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
+  </div>
+  
+  
+	<!-- Footer
+    ================================================== -->
+    <footer class="container" role="contentinfo">
+		<hr class="bs-docs-separator">
+		<ul class="footer-links">
+			<li class="current-version">
+				v0.8.0
+			</li>
+			<li>
+				<a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A//kaizenmodel.org&title=Kaizen%20software%20development%20model&summary=Kaizen%20software%20development%20model%2C%20based%20on%20ideas%20and%20principles%20of%20Lean%2C%20Agile%20and%20IID%20while%20incorporating%20some%20of%20principles%20presented%20by%20W%2EE%2E%20Deming&source=Kaizen%20model%20web20%site" target="_blank" class="btn btn-sm btn-linkedin"><i class="icon-linkedin"></i> | LinkedIn share</a>
+			</li>
+			<li><a href="mailto:kaizen@kaizenmodel.org" class="btn btn-sm btn-github"><i class="icon-envelope"></i> | Connect via email</a></li>
+			<li><a href="skype:pryzah" class="btn btn-sm btn-skype"><i class="icon-skype"></i> | Connect with skype</a></li>
+			<li><a href="http://kaizenmodel.org/vanilla" class="btn btn-sm btn-github"><i class="icon-group"></i> | Discuss on Forum</a></li>
+			<li><a href="http://www.linkedin.com/groups/Kaizen-software-development-model-5166263?home=&gid=5166263" target="_blank" class="btn btn-sm btn-linkedin"><i class="icon-linkedin"></i> | Visit group</a></li>
+		</ul>
+    </footer>
+
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/jquery.js"></script>
+<script src="dist/js/bootstrap.js"></script>
+<script src="assets/js/holder.js"></script>
+<script src="assets/js/application.js"></script>
+
+
+  </body>
+</html>
